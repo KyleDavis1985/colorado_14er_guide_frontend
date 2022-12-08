@@ -14,6 +14,8 @@
 
 ### **_Description_**
 
+This project is centered around the hiking culture of Colorado's 14ers (14k foot mountains). The users will be able to log in and check off which mountains that they have climbed. They will also be able to add trip reports to let the other users know how the conditions are on the mountain. Lastly the users will have access to weather data and GPS for their desired route.
+
 ### **_Technologies Used_**
 
 ### **_Getting Started_**
