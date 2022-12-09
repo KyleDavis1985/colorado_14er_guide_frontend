@@ -2,6 +2,7 @@ import './App.css'
 import { useEffect, useState } from 'react'
 import { CheckSession } from './services/Auth'
 import { Route, Routes } from 'react-router-dom'
+import axios from 'axios'
 import Home from './pages/Home'
 import Header from './components/Header'
 import Mountains from './pages/Mountains'
@@ -13,6 +14,7 @@ const BASE_URL = 'http://localhost:3001/guide'
 
 const App = () => {
   const [authenticated, toggleAuthenticated] = useState(false)
+  const [mountains, setMountains] = useState([])
   const [user, setUser] = useState(null)
 
   // Logout function
@@ -34,6 +36,13 @@ const App = () => {
     if (token) {
       checkToken()
     }
+
+    const mountainCall = async () => {
+      let response = await axios.get(`${BASE_URL}/mountain/`)
+      setMountains(response.data)
+    }
+
+    mountainCall()
   }, [])
 
   return (
