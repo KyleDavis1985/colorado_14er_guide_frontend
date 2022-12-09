@@ -1,7 +1,7 @@
 import './App.css'
 import { useEffect, useState } from 'react'
 import { CheckSession } from './services/Auth'
-import { Route, Routes, Link, useParams } from 'react-router-dom'
+import { Route, Routes, Link } from 'react-router-dom'
 import axios from 'axios'
 import Home from './pages/Home'
 import Header from './components/Header'
@@ -16,7 +16,6 @@ const App = () => {
   const [authenticated, toggleAuthenticated] = useState(false)
   const [user, setUser] = useState(null)
   const [mountainToUser, setMountainToUser] = useState([])
-  let { userId } = useParams
 
   // Logout function
   const handleLogOut = () => {
@@ -60,7 +59,7 @@ const App = () => {
           <Route path="/register" element={<Register />} />
           <Route path="/mountains" element={<Mountains />} />
           <Route
-            path="/checklist/:userId"
+            path="/checklist/:user_Id"
             element={<Checklist mountain={mountainToUser} />}
           />
           <Route path="/tr" element={<TripReports user={user} />} />

@@ -14,7 +14,7 @@ const ChecklistInfo = (props) => {
   checklistCall()
 }, [])
   return (
-    <div>{checklist.name}</div>
+    <div><h3>{props.name}</h3></div>
   )
 }
 
