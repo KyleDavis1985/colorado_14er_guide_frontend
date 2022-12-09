@@ -1,9 +1,17 @@
 import './App.css'
 import { useEffect, useState } from 'react'
 import { CheckSession } from './services/Auth'
+import { Route, Routes } from 'react-router-dom'
+import Home from './pages/Home'
+import Header from './components/Header'
+import Mountains from './pages/Mountains'
+import Checklist from './pages/Checklist'
+import Register from './pages/Register'
+import TripReports from './pages/TripReports'
+import Login from './pages/Login'
 const BASE_URL = 'http://localhost:3001/guide'
 
-function App() {
+const App = () => {
   const [authenticated, toggleAuthenticated] = useState(false)
   const [user, setUser] = useState(null)
 
@@ -30,9 +38,31 @@ function App() {
 
   return (
     <div className="App">
-      <nav></nav>
-      <main></main>
-      <footer></footer>
+      <header>
+        <Header
+          user={user}
+          authenticated={authenticated}
+          handleLogOut={handleLogOut}
+        />
+      </header>
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/mountains" element={<Mountains />} />
+          <Route path="/checklist" element={<Checklist />} />
+          <Route path="/tr" element={<TripReports />} />
+          <Route
+            path="/login"
+            element={
+              <Login
+                setUser={setUser}
+                toggleAuthenticated={toggleAuthenticated}
+              />
+            }
+          />
+        </Routes>
+      </main>
     </div>
   )
 }
