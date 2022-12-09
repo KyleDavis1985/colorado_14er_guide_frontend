@@ -14,7 +14,6 @@ const BASE_URL = 'http://localhost:3001/guide'
 
 const App = () => {
   const [authenticated, toggleAuthenticated] = useState(false)
-  const [mountains, setMountains] = useState([])
   const [user, setUser] = useState(null)
 
   // Logout function
@@ -36,13 +35,6 @@ const App = () => {
     if (token) {
       checkToken()
     }
-
-    const mountainCall = async () => {
-      let response = await axios.get(`${BASE_URL}/mountain/`)
-      setMountains(response.data)
-    }
-
-    mountainCall()
   }, [])
 
   return (
