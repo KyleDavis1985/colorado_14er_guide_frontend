@@ -1,7 +1,7 @@
 import './App.css'
 import { useEffect, useState } from 'react'
 import { CheckSession } from './services/Auth'
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes, Link, useParams } from 'react-router-dom'
 import axios from 'axios'
 import Home from './pages/Home'
 import Header from './components/Header'
@@ -15,6 +15,8 @@ const BASE_URL = 'http://localhost:3001/guide'
 const App = () => {
   const [authenticated, toggleAuthenticated] = useState(false)
   const [user, setUser] = useState(null)
+  const [mountainToUser, setMountainToUser] = useState([])
+  let { userId } = useParams
 
   // Logout function
   const handleLogOut = () => {
@@ -35,9 +37,15 @@ const App = () => {
     if (token) {
       checkToken()
     }
+
+    const mountainCall = async () => {
+      let response = await axios.get(`${BASE_URL}/checklist/mountain`)
+      setMountainToUser(response.data)
+    }
+    mountainCall()
   }, [])
 
-  return (
+  return user && authenticated ? (
     <div className="App">
       <header>
         <Header
@@ -51,7 +59,10 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/register" element={<Register />} />
           <Route path="/mountains" element={<Mountains />} />
-          <Route path="/checklist" element={<Checklist />} />
+          <Route
+            path="/checklist/:userId"
+            element={<Checklist mountain={mountainToUser} />}
+          />
           <Route path="/tr" element={<TripReports user={user} />} />
           <Route
             path="/login"
@@ -64,6 +75,24 @@ const App = () => {
           />
         </Routes>
       </main>
+    </div>
+  ) : (
+    <div>
+      <h1>Sorry, you must be logged in to view that page.</h1>
+      <Link to="/login">Login</Link>
+      <Link to="/Register">Register</Link>
+      <Routes>
+        <Route
+          path="/login"
+          element={
+            <Login
+              setUser={setUser}
+              toggleAuthenticated={toggleAuthenticated}
+            />
+          }
+        />
+        <Route path="/register" element={<Register />} />
+      </Routes>
     </div>
   )
 }

@@ -17,6 +17,7 @@ const TripReports = (props) => {
     }
     tripReportCall()
   }, [])
+  
   return (
     <div>
       <div><TripReportPost user={user}/></div>
