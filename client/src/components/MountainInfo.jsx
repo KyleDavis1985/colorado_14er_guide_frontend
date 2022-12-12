@@ -8,6 +8,7 @@ const MountainInfo = (props) => {
     <h3>Elevation: {props.elevation}</h3>
     <div><img className="image" src={props.image} alt={props.title} ></img></div>
     <h4>Mountain Range: {props.range}</h4>
+    <a href={`https://forecast.weather.gov/MapClick.php?lat=${props.lat}&lon=-${props.long}`}> Weather </a>
 
     </div>
   )

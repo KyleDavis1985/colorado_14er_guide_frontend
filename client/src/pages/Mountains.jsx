@@ -18,7 +18,7 @@ const Mountains = () => {
   return (
     <div>
     {mountains.map((mountain) => (
-      <MountainInfo key={mountain.id} name={mountain.name} rank={mountain.rank} elevation={mountain.elevation} range={mountain.range} image={mountain.image}/>
+      <MountainInfo key={mountain.id} name={mountain.name} rank={mountain.rank} elevation={mountain.elevation} range={mountain.range} image={mountain.image} lat={mountain.lat} long={mountain.long}/>
     ))}  
     </div>
   )

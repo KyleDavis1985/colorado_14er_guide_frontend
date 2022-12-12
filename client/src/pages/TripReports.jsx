@@ -9,6 +9,7 @@ const TripReports = (props) => {
   const BASE_URL = 'http://localhost:3001/guide'
   let user = props.user
 
+  const handleSort = [...tripReport].sort((a, b) => a.rank - b.rank)
 
   useEffect(() => {
     const tripReportCall = async () => {
@@ -22,8 +23,8 @@ const TripReports = (props) => {
     <div>
       <div><TripReportPost user={user}/></div>
       <div>
-      {tripReport.map((post) => (
-        <TripReportInfo key={post.id} body={post.body} title={post.title} image={post.image} BASE_URL={BASE_URL} id={post.id} user={user} userAuth={props.user} auth={props.authenticated}/>
+      {handleSort.map((post) => (
+        <TripReportInfo key={post.id} body={post.body} title={post.title} image={post.image} BASE_URL={BASE_URL} id={post.id} user={user} userAuth={props.user} auth={props.authenticated} created={post.createdAt}/>
       ))}
       </div>
     </div>
@@ -31,7 +32,7 @@ const TripReports = (props) => {
     <div>
       <div>
       {tripReport.map((post) => (
-        <TripReportInfo key={post.id} body={post.body} title={post.title} image={post.image} BASE_URL={BASE_URL} id={post.id} user={user} userAuth={props.user} Auth={props.authenticated}/>
+        <TripReportInfo key={post.id} body={post.body} title={post.title} image={post.image} BASE_URL={BASE_URL} id={post.id} user={user} userAuth={props.user} Auth={props.authenticated} created={post.createdAt}/>
       ))}
       </div>
     </div>

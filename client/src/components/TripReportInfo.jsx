@@ -16,11 +16,18 @@ const TripReportInfo = (props) => {
     window.location.reload(false)
 }
 
+const date = new Date(props.created)
+let newTime = date.toLocaleTimeString('en-US')
+let newDate = date.toLocaleDateString('en-US')
+
 
   if (clicked === false && props.userAuth && props.auth) {
     return (
     <div>
       <div>
+        <div>
+          <h5>{newTime} {newDate}</h5>
+        </div>
         <div>
           <h1>{props.title}</h1>
         </div>

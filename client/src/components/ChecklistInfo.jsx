@@ -31,7 +31,6 @@ return (
   <div>
       <div key={props.id}>
         <h3>{props.name}</h3>
-        <h4>{props.rank}</h4>
         <div>
           <img className="image" src={props.image} alt={props.title} ></img>
         </div>
