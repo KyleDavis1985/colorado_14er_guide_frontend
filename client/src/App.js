@@ -56,7 +56,10 @@ const App = () => {
       </header>
       <main>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route
+            path="/"
+            element={<Home user={user} authenticated={authenticated} />}
+          />
           <Route path="/register" element={<Register />} />
           <Route path="/mountains" element={<Mountains />} />
           <Route
