@@ -42,7 +42,7 @@ const CreatePost = (props) => {
                 <br></br>
                 <textarea className="postText" required type='text' value={newPost.body} onChange={handleChange} name={'body'} placeholder={'Add trip report here'}></textarea>
                 <br></br>
-                <button className='create-post-button'>Create Post</button>
+                <button className='create-post-button'>Create Trip Report</button>
             </form>
         </div>
     )

@@ -16,11 +16,6 @@ const ChecklistInfo = (props) => {
     createChecklist()
   }
 
-  const checkHandlerTwo = () => {
-    setIsChecked(!isChecked)
-    // deleteChecklist()
-  }
-
   const createChecklist = async () => {
     if (!isChecked){
       const createChecklist = {
