@@ -7,6 +7,8 @@ const EditTripReport = (props) => {
     // Handles form submit
     const handleSubmit = async (e) => {
         await editPost(e)
+        props.setClicked === false ? props.setClicked(true) : props.setClicked(false)
+        window.location.reload(false)
     }
 
     // Handles input change
@@ -48,7 +50,7 @@ const EditTripReport = (props) => {
         setNewPost({ title: '', body: '', image: '' })
     }
 
-  return (
+   return (
     <div className="edit-post"> 
     <div className="edit-post-title">Edit Post</div>
     <form className='edit-post-form' onSubmit={handleSubmit}>

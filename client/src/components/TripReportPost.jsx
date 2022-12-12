@@ -33,7 +33,7 @@ const CreatePost = (props) => {
     // Return
     return (
         <div className="create-post">
-            <div className="create-post-title">Create Post</div>
+            <div className="create-post-title">Create Trip Report</div>
             <form className='create-post-form' onSubmit={handleSubmit}>
                 <label>Mountain: </label>
                 <input required type='text' value={newPost.title} onChange={handleChange} name={'title'}></input>

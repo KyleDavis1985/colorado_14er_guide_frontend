@@ -38,7 +38,7 @@ const TripReportInfo = (props) => {
   } else {
     return (
       <div>
-        <EditTripReport title={props.title} body={props.body} image={props.image} id={props.id} BASE_URL={props.BASE_URL}/>
+        <EditTripReport title={props.title} body={props.body} image={props.image} id={props.id} BASE_URL={props.BASE_URL} setClicked={setClicked}/>
       </div>
     )
   }
