@@ -17,7 +17,7 @@ const TripReportInfo = (props) => {
 }
 
 
-  if (clicked === false) {
+  if (clicked === false && props.userAuth && props.auth) {
     return (
     <div>
       <div>
@@ -35,13 +35,29 @@ const TripReportInfo = (props) => {
       <div><button className="edit-button" onClick={handleClick}>Edit Trip Report</button></div>
     </div>
     )
-  } else {
+  } else if (clicked === true && props.userAuth && props.auth){
     return (
       <div>
         <EditTripReport title={props.title} body={props.body} image={props.image} id={props.id} BASE_URL={props.BASE_URL} setClicked={setClicked}/>
       </div>
     )
+  } else if (clicked === false){
+    return (
+      <div>
+      <div>
+        <div>
+          <h1>{props.title}</h1>
+        </div>
+        <div>
+          <h4>{props.body}</h4>
+        </div>
+        <div>
+          <h1>{props.image}</h1>
+        </div>
+      </div>
+    </div>
+    )
   }
-}
+} 
 
 export default TripReportInfo

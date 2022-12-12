@@ -10,6 +10,7 @@ import Checklist from './pages/Checklist'
 import Register from './pages/Register'
 import TripReports from './pages/TripReports'
 import Login from './pages/Login'
+import UnauthorizedHeader from './components/UnauthorizedHeader'
 const BASE_URL = 'http://localhost:3001/guide'
 
 const App = () => {
@@ -62,7 +63,10 @@ const App = () => {
             path="/checklist/:user_Id"
             element={<Checklist mountain={mountainToUser} />}
           />
-          <Route path="/tr" element={<TripReports user={user} />} />
+          <Route
+            path="/tr"
+            element={<TripReports user={user} authenticated={authenticated} />}
+          />
           <Route
             path="/login"
             element={
@@ -76,22 +80,27 @@ const App = () => {
       </main>
     </div>
   ) : (
-    <div>
-      <h1>Sorry, you must be logged in to view that page.</h1>
-      <Link to="/login">Login</Link>
-      <Link to="/Register">Register</Link>
-      <Routes>
-        <Route
-          path="/login"
-          element={
-            <Login
-              setUser={setUser}
-              toggleAuthenticated={toggleAuthenticated}
-            />
-          }
-        />
-        <Route path="/register" element={<Register />} />
-      </Routes>
+    <div className="App">
+      <header>
+        <UnauthorizedHeader />
+      </header>
+      <main>
+        <Routes>
+          <Route
+            path="/login"
+            element={
+              <Login
+                setUser={setUser}
+                toggleAuthenticated={toggleAuthenticated}
+              />
+            }
+          />
+          <Route path="/register" element={<Register />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/mountains" element={<Mountains />} />
+          <Route path="/tr" element={<TripReports user={user} />} />
+        </Routes>
+      </main>
     </div>
   )
 }

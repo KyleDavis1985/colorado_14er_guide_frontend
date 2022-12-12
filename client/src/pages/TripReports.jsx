@@ -18,12 +18,20 @@ const TripReports = (props) => {
     tripReportCall()
   }, [])
   
-  return (
+  return props.user && props.authenticated ?(
     <div>
       <div><TripReportPost user={user}/></div>
       <div>
       {tripReport.map((post) => (
-        <TripReportInfo key={post.id} body={post.body} title={post.title} image={post.image} BASE_URL={BASE_URL} id={post.id} user={user}/>
+        <TripReportInfo key={post.id} body={post.body} title={post.title} image={post.image} BASE_URL={BASE_URL} id={post.id} user={user} userAuth={props.user} auth={props.authenticated}/>
+      ))}
+      </div>
+    </div>
+  ):(
+    <div>
+      <div>
+      {tripReport.map((post) => (
+        <TripReportInfo key={post.id} body={post.body} title={post.title} image={post.image} BASE_URL={BASE_URL} id={post.id} user={user} userAuth={props.user} Auth={props.authenticated}/>
       ))}
       </div>
     </div>
