@@ -35,7 +35,7 @@ const CreatePost = (props) => {
         <div className="create-post">
             <div className="create-post-title">Create Post</div>
             <form className='create-post-form' onSubmit={handleSubmit}>
-                <label>Title: </label>
+                <label>Mountain: </label>
                 <input required type='text' value={newPost.title} onChange={handleChange} name={'title'}></input>
                 <label>Image Link: </label>
                 <input type='text' value={newPost.image} onChange={handleChange} name={'image'} placeholder={'Optional'}></input>

@@ -9,21 +9,28 @@ const Checklist = (props) => {
   const [mountains, setMountains] = useState([])
   const BASE_URL = 'http://localhost:3001/guide'
 
+  const handleSubmit = async (e) => {
+    window.location.reload(false)
+}
+
   useEffect(() => {
     const mountainCall = async () => {
       let response = await axios.get(`${BASE_URL}/mountain/cl`)
       setMountains(response.data)
-      console.log(response.data)
     }
     mountainCall()
   }, [])
 
   return  (
     <div>
+      <form className='create-post-form' onSubmit={handleSubmit}>
       {mountains.map((mountain) => (
-        <ChecklistInfo key={mountain.id} id={mountain.id} name={mountain.name} image={mountain.image} BASE_URL={BASE_URL} users={mountain.mountain_cl}/>
+        <div>
+        <ChecklistInfo key={mountain.id} id={mountain.id} name={mountain.name} image={mountain.image} BASE_URL={BASE_URL} users={mountain.mountain_cl} handleSubmit={handleSubmit}/>
+        </div>
       ))}
       <button className='create-post-button'>Save Page</button>
+      </form>
     </div>
   ) 
 }
