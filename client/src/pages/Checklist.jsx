@@ -26,7 +26,7 @@ const Checklist = (props) => {
       <form className='create-post-form' onSubmit={handleSubmit}>
       {mountains.map((mountain) => (
         <div>
-        <ChecklistInfo key={mountain.id} id={mountain.id} name={mountain.name} image={mountain.image} BASE_URL={BASE_URL} users={mountain.mountain_cl} handleSubmit={handleSubmit}/>
+        <ChecklistInfo key={mountain.id} id={mountain.id} name={mountain.name} image={mountain.image} BASE_URL={BASE_URL} users={mountain.mountain_cl} handleSubmit={handleSubmit} rank={mountain.rank}/>
         </div>
       ))}
       <button className='create-post-button'>Save Page</button>

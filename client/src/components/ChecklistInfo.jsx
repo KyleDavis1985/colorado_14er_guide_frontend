@@ -37,7 +37,10 @@ const ChecklistInfo = (props) => {
 
   return (
     <div>
-    <div><h3>{props.name}</h3></div>
+    <div><h3>{props.name}</h3>
+    <h4>{props.rank}</h4>
+    <div><img className="image" src={props.image} alt={props.title} ></img></div>
+    </div>
     
     <div>
       {props.users[0] ?
