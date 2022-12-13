@@ -11,7 +11,7 @@ const TripReports = (props) => {
   let BASE_URL = HEROKU_URL ? HEROKU_URL : LOCAL_URL
   let user = props.user
 
-  const handleSort = [...tripReport].sort((a, b) => a.createdAt - b.createdAt)
+  const handleSort = [...tripReport].sort((a, b) => a.id - b.cid)
 
   useEffect(() => {
     const tripReportCall = async () => {
