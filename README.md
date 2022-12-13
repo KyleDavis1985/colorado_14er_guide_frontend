@@ -1,49 +1,70 @@
-# colorado_14er_guide_frontend
+# Getting Started with Create React App
 
-## Date: 12/15/2022
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
----
+## Available Scripts
 
-#### [Frontend-Repo](https://github.com/KyleDavis1985/colorado_14er_guide_frontend) | [Backend-Repo](https://github.com/KyleDavis1985/colorado_14er_guide_backend) | [Trello](https://trello.com/b/Hm8kE2Pi/fourteener) | [Heroku]()
+In the project directory, you can run:
 
----
+### `npm start`
 
-### **_Collaborator_**
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-### Kyle Davis | [LinkedIn](https://www.linkedin.com/in/kyle-davis-c/) | [GitHub](https://github.com/KyleDavis1985)
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-### **_Description_**
+### `npm test`
 
-This project is centered around the hiking culture of Colorado's 14ers (14k foot mountains). The users will be able to log in and check off which mountains that they have climbed. They will also be able to add trip reports to let the other users know how the conditions are on the mountain. Lastly the users will have access to weather data and GPS for their desired route.
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### **_Technologies Used_**
+### `npm run build`
 
-### **_Getting Started_**
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-#### _Production_
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-#### _Development_
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-- `Fork` and `Clone` this repo
-- `cd` into directory
-- run `npm install`
+### `npm run eject`
 
----
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-#### _Component Hierarchy Diagram_
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-![Component Hierarchy Diagram](https://drive.google.com/file/d/1-QfQv3nHp38gBabKesez9MQXus82eCI5/view?usp=sharing)
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
----
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-#### _Entity Relationship Diagram_
+## Learn More
 
-![Entity Relationship Diagram](https://drive.google.com/file/d/1G2iN8LQnQ5QLOEfztN6ujkTUZYRLfS6m/view?usp=sharing)
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
----
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-### **_Screenshots_**
+### Code Splitting
 
-### **_Future Updates_**
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Credits
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
