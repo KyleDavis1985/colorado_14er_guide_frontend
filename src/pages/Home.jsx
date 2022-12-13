@@ -2,12 +2,16 @@ import React from 'react'
 
 const Home = (props) => {
   return props.user && props.authenticated ? (
-    <div>
-      <h4>Welcome {props.user.name}!</h4>
+    <div className='homeWrapper'>
+      <div className='homeInfoWrapper'>
+        <h3>Welcome {props.user.name}</h3>
+      </div>
+      <div><h3>to</h3></div>
+      <h1 className='homeTitle'>53 PEAKS</h1>
     </div>
   ):
   (
-    <div>
+    <div className='homeWrapper'>
     <h4>Welcome!</h4>
     </div>
   )

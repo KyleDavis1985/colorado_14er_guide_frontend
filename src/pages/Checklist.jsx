@@ -25,7 +25,7 @@ const Checklist = (props) => {
 
   return  (
     <div className='checklist-wrapper'>
-      <form className='create-post-form' onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}>
       <button className='create-post-button'>Save Page</button>
       <section className='checklist-container'>
         <div className='checklist-container-div'>

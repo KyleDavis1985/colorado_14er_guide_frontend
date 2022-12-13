@@ -13,7 +13,7 @@ outline: 1px solid slategrey;
 
 .App {
   text-align: center;
-  margin: 0;
+  margin:auto;
 }
 
 .image{
@@ -137,6 +137,7 @@ outline: 1px solid slategrey;
 .checklist-container-div{
   overflow-y: scroll;
   height: 1200px;
+  padding-right: 10px;
 }
 
 .checklist-info-wrapper{
@@ -156,8 +157,8 @@ outline: 1px solid slategrey;
   align-items: center;
 }
 
-.checkmark {
-  color: greenyellow;
+.check-mark {
+  color: rgb(0, 243, 24);
 }
 
 .x{
@@ -182,4 +183,39 @@ outline: 1px solid slategrey;
   border-left: 3px solid #b0c4c5;
   border-right: 3px solid #3e5251;
   border-bottom: 3px solid #3e5251;
+  background-color: orangered;
+}
+
+.trWrapper{
+  height: 1200px;
+}
+
+.trPostWrapper{
+  padding: 20px;
+}
+
+.create-post-form {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+}
+
+.homeWrapper{
+  background-image: url("https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/maroon-bells-sunset-luis-a-ramirez.jpg");
+  height: 1300px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.homeInfoWrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 200px;
+}
+
+.homeTitle {
+  font-size: 6ch;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }

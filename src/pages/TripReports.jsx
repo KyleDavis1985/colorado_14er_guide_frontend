@@ -22,17 +22,19 @@ const TripReports = (props) => {
   }, [])
   
   return props.user && props.authenticated ?(
-    <div>
-      <div><TripReportPost user={user}/></div>
-      <div>
+    <div className='trWrapper'>
+      <div className='trPostWrapper'>
+        <TripReportPost user={user}/>
+      </div>
+      <div className='trBodyWrapper'>
       {handleSort.map((post) => (
         <TripReportInfo key={post.id} body={post.body} title={post.title} image={post.image} BASE_URL={BASE_URL} id={post.id} user={user} userAuth={props.user} auth={props.authenticated} created={post.createdAt}/>
       ))}
       </div>
     </div>
   ):(
-    <div>
-      <div>
+    <div className='trWrapper'>
+      <div className='trBodyWrapper'>
       {tripReport.map((post) => (
         <TripReportInfo key={post.id} body={post.body} title={post.title} image={post.image} BASE_URL={BASE_URL} id={post.id} user={user} userAuth={props.user} Auth={props.authenticated} created={post.createdAt}/>
       ))}

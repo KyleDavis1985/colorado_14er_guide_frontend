@@ -47,7 +47,7 @@ return (
       {props.users[0] ?
       <section className='checkmark-wrapper'> 
         <div>
-          <h4 className='checkmark'>✔️</h4>
+          <h4 className='check-mark'>✔️</h4>
         </div>
         <div>
           <input
@@ -55,7 +55,7 @@ return (
             id="checkbox"
             checked={deleteChecked}
             onChange={deleteCheckHandler}/>
-          <label htmlFor="checkbox">NOT climbed</label>
+          <label htmlFor="checkbox">Undo</label>
         </div>
       </section> 
       : 
