@@ -7,14 +7,14 @@ const Checklist = (props) => {
   const [mountains, setMountains] = useState([])
   const LOCAL_URL = 'http://localhost:3001/guide'
   const HEROKU_URL='https://mighty-woodland-71351.herokuapp.com/guide'
-  let BASE_URL = HEROKU_URL ? HEROKU_URL : LOCAL_URL
+  let BASE_URL = HEROKU_URL
 
   const handleSubmit = async () => {
     window.location.reload(false)
   }
 
   const handleSort = [...mountains].sort((a, b) => a.rank - b.rank)
-  
+
   useEffect(() => {
     const mountainCall = async () => {
       let response = await axios.get(`${BASE_URL}/mountain/cl`)
@@ -28,7 +28,7 @@ const Checklist = (props) => {
       <form className='create-post-form' onSubmit={handleSubmit}>
       <button className='create-post-button'>Save Page</button>
       {handleSort.map((mountain) => (
-          <ChecklistInfo key={mountain.id} id={mountain.id} name={mountain.name} image={mountain.image} BASE_URL={BASE_URL} users={mountain.mountain_cl} handleSubmit={handleSubmit} rank={mountain.rank} mountain={mountains}/>
+          <ChecklistInfo key={mountain.id} id={mountain.id} name={mountain.name} image={mountain.image} BASE_URL={BASE_URL} users={mountain.mountain_cl} handleSubmit={handleSubmit} rank={mountain.rank} mountain={mountains} userId={props.userId}/>
     
       ))}
       <button className='create-post-button'>Save Page</button>

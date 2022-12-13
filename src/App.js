@@ -64,7 +64,7 @@ const App = () => {
           <Route path="/mountains" element={<Mountains />} />
           <Route
             path="/checklist/:user_Id"
-            element={<Checklist mountain={mountainToUser} />}
+            element={<Checklist mountain={mountainToUser} userId={user.id} />}
           />
           <Route
             path="/tr"

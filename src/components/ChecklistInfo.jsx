@@ -1,11 +1,8 @@
 import React from 'react'
 import { useState } from 'react'
-import { useParams } from 'react-router-dom'
 import axios from 'axios'
 
-
 const ChecklistInfo = (props) => {
-  let { user_Id } = useParams()
   const [isChecked, setIsChecked] = useState(false)
   const [deleteChecked, setDeleteChecked] = useState(false)
   const [newChecklist, setNewChecklist] = useState({ userId: '', mountainId: '', hasClimbed: '' })
@@ -30,7 +27,7 @@ const ChecklistInfo = (props) => {
     if (!isChecked){
       const createChecklist = {
         ...newChecklist,
-        userId: user_Id,
+        userId: props.userId,
         mountainId: props.id,
         hasClimbed: true
       }
