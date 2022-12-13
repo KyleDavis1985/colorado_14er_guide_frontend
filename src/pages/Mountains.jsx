@@ -18,7 +18,17 @@ const Mountains = () => {
   }, [])
 
   return (
-    <div>
+    <div className='mountain-container'>
+      <div className='table-outline'>
+        <div className='table-header'>
+          <h3>Mountain</h3>
+          <h3>Rank</h3>
+          <h3>Elevation</h3>
+          <h3>Image</h3>
+          <h3>Range</h3>
+          <h3>Additional</h3>
+        </div>
+      </div>
     {mountains.map((mountain) => (
       <MountainInfo key={mountain.id} name={mountain.name} rank={mountain.rank} elevation={mountain.elevation} range={mountain.range} image={mountain.image} lat={mountain.lat} long={mountain.long}/>
     ))}  
