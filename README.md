@@ -38,7 +38,7 @@ This project is centered around the hiking culture of Colorado's 14ers (14k foot
 
 #### _Entity Relationship Diagram_
 
-![Entity Relationship Diagram](https://i.imgur.com/CYBin9C.jpg)
+![Entity Relationship Diagram](https://i.imgur.com/nJogjGC.png)
 
 ---
 
