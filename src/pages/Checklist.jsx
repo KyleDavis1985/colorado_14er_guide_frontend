@@ -7,7 +7,7 @@ const Checklist = (props) => {
   const [mountains, setMountains] = useState([])
   const LOCAL_URL = 'http://localhost:3001/guide'
   const HEROKU_URL='https://mighty-woodland-71351.herokuapp.com/guide'
-  let BASE_URL = HEROKU_URL
+  let BASE_URL = LOCAL_URL ? LOCAL_URL : HEROKU_URL
 
   const handleSubmit = async () => {
     window.location.reload(false)
