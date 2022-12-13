@@ -115,3 +115,15 @@ outline: 1px solid slategrey;
   overflow-y: scroll;
   height: 1200px;
 }
+
+.additional-info-wrapper {
+  text-decoration: none;
+  color:#1BA098;
+  font-weight: bold;
+}
+
+.additional-info-wrapper:hover {
+  text-decoration: none;
+  color:orangered;
+  font-weight: bold;
+}
