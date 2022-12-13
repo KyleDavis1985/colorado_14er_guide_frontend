@@ -24,13 +24,14 @@ const Checklist = (props) => {
   }, [])
 
   return  (
-    <div>
+    <div className='checklist-wrapper'>
       <form className='create-post-form' onSubmit={handleSubmit}>
       <button className='create-post-button'>Save Page</button>
-      {handleSort.map((mountain) => (
-          <ChecklistInfo key={mountain.id} id={mountain.id} name={mountain.name} image={mountain.image} BASE_URL={BASE_URL} users={mountain.mountain_cl} handleSubmit={handleSubmit} rank={mountain.rank} mountain={mountains} userId={props.userId}/>
-    
-      ))}
+      <div className='checklist-container'>
+        {handleSort.map((mountain) => (
+            <ChecklistInfo key={mountain.id} id={mountain.id} name={mountain.name} elevation={mountain.elevation} image={mountain.image} BASE_URL={BASE_URL} users={mountain.mountain_cl} handleSubmit={handleSubmit} rank={mountain.rank} mountain={mountains} userId={props.userId}/>
+        ))}
+      </div>
       <button className='create-post-button'>Save Page</button>
       </form>
     </div>

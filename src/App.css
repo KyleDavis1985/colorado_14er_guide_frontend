@@ -23,6 +23,7 @@ outline: 1px solid slategrey;
 
 .main-wrapper{
   margin-top: 70px;
+  background-color: #051622;
 }
 
 .header-wrapper{
@@ -36,7 +37,6 @@ outline: 1px solid slategrey;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #051622;
 }
 
 .mountain-container{
@@ -126,4 +126,59 @@ outline: 1px solid slategrey;
   text-decoration: none;
   color:orangered;
   font-weight: bold;
+}
+
+.checklist-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow-y: scroll;
+  height: 1200px;
+}
+
+.checklist-info-wrapper{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  color: #DEB992;
+  width: 40%;
+  height: 60px;
+  margin: 5px;
+}
+
+.checkmark-wrapper{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkmark {
+  color: greenyellow;
+}
+
+.x{
+  color: red;
+}
+
+.create-post-button{
+  border: none;
+  background-color:#1BA098;
+  color:#DEB992;
+  text-shadow: 2px 2px #071313;
+  letter-spacing: 1.5px;
+  font-size: 20px;
+  height: 40px;
+  width: 200px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.create-post-button:hover{
+  border-top: 3px solid #b0c4c5;
+  border-left: 3px solid #b0c4c5;
+  border-right: 3px solid #3e5251;
+  border-bottom: 3px solid #3e5251;
 }

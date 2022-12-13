@@ -36,35 +36,43 @@ const ChecklistInfo = (props) => {
   }
 
 return (
-  <div>
+  <div className='checklist-info-wrapper'>
       <div key={props.id}>
         <h3>{props.name}</h3>
-        <div>
-          <img className="image" src={props.image} alt={props.title} ></img>
-        </div>
+      </div>
+      <div>
+      <h5>{props.elevation}</h5>
       </div>
     <div>
       {props.users[0] ?
-      <div> 
-        <h4>✔️</h4>
-        <input
-          type="checkbox"
-          id="checkbox"
-          checked={deleteChecked}
-          onChange={deleteCheckHandler}/>
-        <label htmlFor="checkbox">I have NOT climbed this mountain</label>
-      </div> 
+      <section className='checkmark-wrapper'> 
+        <div>
+          <h4 className='checkmark'>✔️</h4>
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            id="checkbox"
+            checked={deleteChecked}
+            onChange={deleteCheckHandler}/>
+          <label htmlFor="checkbox">NOT climbed</label>
+        </div>
+      </section> 
       : 
-      <div> 
-        <h4>✘</h4>
-        <input
-          type="checkbox"
-          id="checkbox"
-          checked={isChecked}
-          onChange={createCheckHandler}
-        />
-        <label htmlFor="checkbox">I have climbed this mountain</label>
-      </div>}
+      <section className='checkmark-wrapper'> 
+        <div>
+          <h4 className='x'>✘</h4>
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            id="checkbox"
+            checked={isChecked}
+            onChange={createCheckHandler}
+          />
+          <label htmlFor="checkbox">Climbed</label>
+        </div>
+      </section>}
     </div>
   </div>
   )
