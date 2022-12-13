@@ -67,6 +67,7 @@ return (
           <input
             type="checkbox"
             id="checkbox"
+            className='checkbox'
             checked={isChecked}
             onChange={createCheckHandler}
           />

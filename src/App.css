@@ -130,9 +130,11 @@ outline: 1px solid slategrey;
 
 .checklist-container{
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+.checklist-container-div{
   overflow-y: scroll;
   height: 1200px;
 }
@@ -143,7 +145,6 @@ outline: 1px solid slategrey;
   justify-content: center;
   align-items: center;
   color: #DEB992;
-  width: 40%;
   height: 60px;
   margin: 5px;
 }
