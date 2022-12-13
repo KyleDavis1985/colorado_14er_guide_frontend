@@ -6,7 +6,9 @@ import TripReportInfo from '../components/TripReportInfo'
 
 const TripReports = (props) => {
   const [tripReport, setTripReport] = useState([])
-  const BASE_URL = 'http://localhost:3001/guide'
+  const LOCAL_URL = 'http://localhost:3001/guide'
+  const HEROKU_URL='https://mighty-woodland-71351.herokuapp.com/guide'
+  let BASE_URL = HEROKU_URL ? HEROKU_URL : LOCAL_URL
   let user = props.user
 
   const handleSort = [...tripReport].sort((a, b) => a.createdAt - b.createdAt)

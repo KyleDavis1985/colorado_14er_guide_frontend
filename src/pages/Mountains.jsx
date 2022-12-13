@@ -5,7 +5,9 @@ import MountainInfo from '../components/MountainInfo'
 
 const Mountains = () => {
   const [mountains, setMountains] = useState([])
-  const BASE_URL = 'http://localhost:3001/guide'
+  const LOCAL_URL = 'http://localhost:3001/guide'
+  const HEROKU_URL='https://mighty-woodland-71351.herokuapp.com/guide'
+  let BASE_URL = HEROKU_URL ? HEROKU_URL : LOCAL_URL
 
   useEffect(() => {
     const mountainCall = async () => {

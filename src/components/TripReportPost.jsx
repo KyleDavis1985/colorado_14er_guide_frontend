@@ -4,7 +4,9 @@ import axios from "axios";
 
 const CreatePost = (props) => {
     let navigate = useNavigate()
-    const BASE_URL = 'http://localhost:3001/guide'
+    const LOCAL_URL = 'http://localhost:3001/guide'
+    const HEROKU_URL='https://mighty-woodland-71351.herokuapp.com/guide'
+    let BASE_URL = HEROKU_URL ? HEROKU_URL : LOCAL_URL
     const [newPost, setNewPost] = useState({ title: '', body: '', image: '' })
 
     // Create Post Function
