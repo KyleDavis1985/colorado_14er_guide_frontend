@@ -7,12 +7,23 @@ import axios from 'axios'
 const ChecklistInfo = (props) => {
   let { user_Id } = useParams()
   const [isChecked, setIsChecked] = useState(false)
+  const [deleteChecked, setDeleteChecked] = useState(false)
   const [newChecklist, setNewChecklist] = useState({ userId: '', mountainId: '', hasClimbed: '' })
   const BASE_URL = props.BASE_URL
 
-  const checkHandler = () => {
+  const createCheckHandler = () => {
     setIsChecked(!isChecked)
     createChecklist()
+  }
+
+  const deleteCheckHandler = () => {
+    setDeleteChecked(!deleteChecked)
+    deleteChecklist()
+  }
+
+  const deleteChecklist = async () => {
+    if (!deleteChecked)
+      await axios.delete(`${props.BASE_URL}/checklist/${props.id}`)
   }
 
   const createChecklist = async () => {
@@ -27,6 +38,8 @@ const ChecklistInfo = (props) => {
     }
   }
 
+console.log(props.users[0])
+
 return (
   <div>
       <div key={props.id}>
@@ -39,6 +52,12 @@ return (
       {props.users[0] ?
       <div> 
         <h4>✔️</h4>
+        <input
+          type="checkbox"
+          id="checkbox"
+          checked={deleteChecked}
+          onChange={deleteCheckHandler}/>
+        <label htmlFor="checkbox">I have NOT climbed this mountain</label>
       </div> 
       : 
       <div> 
@@ -47,12 +66,13 @@ return (
           type="checkbox"
           id="checkbox"
           checked={isChecked}
-          onChange={checkHandler}/>
+          onChange={createCheckHandler}
+        />
         <label htmlFor="checkbox">I have climbed this mountain</label>
       </div>}
     </div>
   </div>
   )
-}
+} 
 
 export default ChecklistInfo

@@ -9,7 +9,7 @@ const TripReports = (props) => {
   const BASE_URL = 'http://localhost:3001/guide'
   let user = props.user
 
-  const handleSort = [...tripReport].sort((a, b) => a.rank - b.rank)
+  const handleSort = [...tripReport].sort((a, b) => a.createdAt - b.createdAt)
 
   useEffect(() => {
     const tripReportCall = async () => {

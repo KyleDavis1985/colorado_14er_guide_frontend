@@ -23,8 +23,8 @@ const Checklist = (props) => {
 
   return  (
     <div>
-      <button className='create-post-button'>Save Page</button>
       <form className='create-post-form' onSubmit={handleSubmit}>
+      <button className='create-post-button'>Save Page</button>
       {handleSort.map((mountain) => (
           <ChecklistInfo key={mountain.id} id={mountain.id} name={mountain.name} image={mountain.image} BASE_URL={BASE_URL} users={mountain.mountain_cl} handleSubmit={handleSubmit} rank={mountain.rank} mountain={mountains}/>
     
