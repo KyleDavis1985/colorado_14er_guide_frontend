@@ -19,19 +19,23 @@ const Mountains = () => {
 
   return (
     <div className='mountain-container'>
-      <div className='table-outline'>
+      <header className='table-outline'>
         <div className='table-header'>
+          <h3>Image</h3>
           <h3>Mountain</h3>
           <h3>Rank</h3>
           <h3>Elevation</h3>
-          <h3>Image</h3>
           <h3>Range</h3>
           <h3>Additional</h3>
         </div>
-      </div>
-    {mountains.map((mountain) => (
-      <MountainInfo key={mountain.id} name={mountain.name} rank={mountain.rank} elevation={mountain.elevation} range={mountain.range} image={mountain.image} lat={mountain.lat} long={mountain.long}/>
-    ))}  
+      </header>
+      <section className='mountain-info-wrapper'>
+        <div className='scroll'>
+          {mountains.map((mountain) => (
+            <MountainInfo key={mountain.id} name={mountain.name} rank={mountain.rank} elevation={mountain.elevation} range={mountain.range} image={mountain.image} lat={mountain.lat} long={mountain.long}/>
+          ))} 
+        </div> 
+      </section>
     </div>
   )
 }

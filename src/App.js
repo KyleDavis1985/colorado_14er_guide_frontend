@@ -49,14 +49,14 @@ const App = () => {
 
   return user && authenticated ? (
     <div className="App">
-      <header>
+      <header className="header-wrapper">
         <Header
           user={user}
           authenticated={authenticated}
           handleLogOut={handleLogOut}
         />
       </header>
-      <main>
+      <main className="main-wrapper">
         <Routes>
           <Route
             path="/"
