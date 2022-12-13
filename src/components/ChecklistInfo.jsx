@@ -38,8 +38,6 @@ const ChecklistInfo = (props) => {
     }
   }
 
-console.log(props.users[0])
-
 return (
   <div>
       <div key={props.id}>
