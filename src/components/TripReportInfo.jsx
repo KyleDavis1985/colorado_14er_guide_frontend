@@ -26,7 +26,7 @@ let tripReport
 <div className='entireTrWrapper'>
   <div className='trWidthWrapper'>
     <div>
-      <h5 className='trTime'>Posted On: {newDate} at {newTime}</h5>
+      <h5 className='trTime'>Posted on: {newDate} at {newTime}</h5>
     </div>
     <div className='trTitleWrapper'>
       <h3 className='trTitle'>{props.title}</h3>
@@ -64,7 +64,7 @@ let tripReport
 <div className='entireTrWrapper'>
   <div className='trWidthWrapper'>
     <div>
-      <h5 className='trTime'>Posted On: {newDate} at {newTime}</h5>
+      <h5 className='trTime'>Posted on: {newDate} at {newTime}</h5>
     </div>
     <div className='trTitleWrapper'>
       <h3 className='trTitle'>{props.title}</h3>

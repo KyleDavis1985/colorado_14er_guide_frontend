@@ -47,7 +47,7 @@ return (
       {props.users[0] ?
       <section className='checkmark-wrapper'> 
         <div>
-          <h4 className='check-mark'>✔️</h4>
+          <h4 className='check-mark'>✅</h4>
         </div>
         <div>
           <input
