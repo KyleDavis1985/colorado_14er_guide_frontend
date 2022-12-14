@@ -64,6 +64,10 @@ This project is centered around the hiking culture of Colorado's 14ers (14k foot
 
 ![Posts](https://i.imgur.com/cHX2w1Y.png)
 
+---
+
+![Mountains](https://i.imgur.com/N153O3w.png)
+
 ### **_Future Updates_**
 
 - Add routes for each mountain
