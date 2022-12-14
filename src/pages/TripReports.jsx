@@ -38,6 +38,7 @@ const TripReports = (props) => {
   ):(
     <div className='trWrapper'>
       <div className='trBodyWrapper'>
+        <h1 className='trUnauthHeader'>Please login or register to create a trip report</h1>
       {tripReport.map((post) => (
         <TripReportInfo key={post.id} body={post.body} title={post.title} image={post.image} BASE_URL={BASE_URL} id={post.id} user={user} userAuth={props.user} Auth={props.authenticated} created={post.createdAt} userId={post.userId}/>
       ))}

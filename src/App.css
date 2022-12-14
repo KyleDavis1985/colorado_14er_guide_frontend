@@ -74,19 +74,9 @@ outline: 1px solid slategrey;
 }
 
 .header-container{
-  display: grid;
-  justify-content: center;
-  align-items: center;
   height: 70px;
   background-color: #051622;
   border-bottom: 2px solid #DEB992;
-}
-
-.left-header {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  justify-items: start;
-  align-items: start;
 }
 
 .right-align {
@@ -113,7 +103,7 @@ outline: 1px solid slategrey;
 
 .scroll{
   overflow-y: scroll;
-  height: 1200px;
+  height: 100vh;
 }
 
 .additional-info-wrapper {
@@ -136,7 +126,7 @@ outline: 1px solid slategrey;
 
 .checklist-container-div{
   overflow-y: scroll;
-  height: 1200px;
+  height: 100vh;
   padding-right: 10px;
 }
 
@@ -189,7 +179,8 @@ outline: 1px solid slategrey;
 .trWrapper{
   height: 100%;
   background-color: #051622;
-  height: fill;
+  height: 100vh;
+  overflow-y: scroll;
 }
 
 .trPostWrapper{
@@ -203,7 +194,7 @@ outline: 1px solid slategrey;
 
 .homeWrapper{
   background-image: url("https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/maroon-bells-sunset-luis-a-ramirez.jpg");
-  height: 1300px;
+  height: 100vh;
   background-repeat: no-repeat;
   background-size: contain;
   background-color:#051622
@@ -406,4 +397,22 @@ outline: 1px solid slategrey;
   justify-content: center;
   align-items: center;
   row-gap: 4px;
+}
+
+.trUnauthHeader{
+  color:#1BA098;
+}
+
+.nav-header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 30px 0 30px;
+
+  height: 50px;
+}
+
+.left-header{
+  display: flex;
 }
