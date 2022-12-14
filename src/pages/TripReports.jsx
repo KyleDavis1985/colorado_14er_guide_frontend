@@ -26,6 +26,9 @@ const TripReports = (props) => {
       <div className='trPostWrapper'>
         <TripReportPost user={user}/>
       </div>
+      <div className='trip-title-wrapper'>
+        <h1 className='trip-title'>Trip Reports</h1>
+      </div>
       <div className='trBodyWrapper'>
       {handleSort.map((post) => (
         <TripReportInfo key={post.id} body={post.body} title={post.title} image={post.image} BASE_URL={BASE_URL} id={post.id} user={user} userAuth={props.user} auth={props.authenticated} created={post.createdAt}/>

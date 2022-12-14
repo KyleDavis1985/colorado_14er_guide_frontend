@@ -35,7 +35,9 @@ const CreatePost = (props) => {
     // Return
     return (
         <div className="create-post">
-            <div className="create-post-title">Create Trip Report</div>
+            <div className="postTitleWrapper">
+                <div className="create-post-title">Create Trip Report</div>
+            </div>
             <form className='create-post-form' onSubmit={handleSubmit}>
                 <label>Mountain: </label>
                 <input required type='text' value={newPost.title} onChange={handleChange} name={'title'}></input>
@@ -47,6 +49,9 @@ const CreatePost = (props) => {
                 <br></br>
                 <button className='create-post-button'>Create Trip Report</button>
             </form>
+            <div className="borderWrapper">
+                <div className="border"></div>
+            </div>
         </div>
     )
 }

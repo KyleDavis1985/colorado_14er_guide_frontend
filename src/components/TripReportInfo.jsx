@@ -29,10 +29,10 @@ let newDate = date.toLocaleDateString('en-US')
           <h5>{newTime} {newDate}</h5>
         </div>
         <div>
-          <h1>{props.title}</h1>
+          <h3>{props.title}</h3>
         </div>
         <div>
-          <h4>{props.body}</h4>
+          <h5>{props.body}</h5>
         </div>
         <div>
           <h1>{props.image}</h1>

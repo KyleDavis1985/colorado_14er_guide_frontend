@@ -169,9 +169,9 @@ outline: 1px solid slategrey;
   border: none;
   background-color:#1BA098;
   color:#DEB992;
-  text-shadow: 2px 2px #071313;
   letter-spacing: 1.5px;
-  font-size: 20px;
+  font-size: 15px;
+  font-weight: bold;
   height: 40px;
   width: 200px;
   margin-top: 20px;
@@ -187,7 +187,7 @@ outline: 1px solid slategrey;
 }
 
 .trWrapper{
-  height: 1200px;
+  height: 100%;
 }
 
 .trPostWrapper{
@@ -195,10 +195,8 @@ outline: 1px solid slategrey;
 }
 
 .create-post-form {
-  display: grid;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-  justify-content: center;
-  align-items: center;
+  color:#DEB992;
+  font-weight: bold;
 }
 
 .homeWrapper{
@@ -219,3 +217,25 @@ outline: 1px solid slategrey;
   font-size: 6ch;
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
+
+.postText {
+  height: 200px;
+  width: 300px;
+  margin: 20px 0 20px 0
+}
+
+.create-post-title, .border {
+  font-size: 3ch;
+  border-bottom: 2px solid #DEB992;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  color:#DEB992;
+  width: 50%;
+}
+
+.postTitleWrapper, .borderWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
