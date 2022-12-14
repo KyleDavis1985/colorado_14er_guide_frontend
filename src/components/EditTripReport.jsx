@@ -76,7 +76,7 @@ return (
             <br></br>
             <textarea className="editText" placeholder={props.body} value={newPost.body} onChange={handleChange} name={'body'}></textarea>
             <br></br>
-            <button className='create-post-button'>Confirm Changes</button>
+            <button className='edit-post-button'>Confirm Changes</button>
         </form>
     </div>
 )

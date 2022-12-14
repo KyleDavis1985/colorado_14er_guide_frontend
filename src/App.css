@@ -165,7 +165,7 @@ outline: 1px solid slategrey;
   color: red;
 }
 
-.create-post-button{
+.create-post-button, .edit-post-button{
   border: none;
   background-color:#1BA098;
   color:#DEB992;
@@ -178,7 +178,7 @@ outline: 1px solid slategrey;
   margin-bottom: 20px;
 }
 
-.create-post-button:hover{
+.create-post-button:hover, .edit-post-button:hover{
   border-top: 3px solid #b0c4c5;
   border-left: 3px solid #b0c4c5;
   border-right: 3px solid #3e5251;
@@ -307,11 +307,9 @@ outline: 1px solid slategrey;
 
 .edit-post-title {
   font-size: 3ch;
-  border-top: 2px solid #DEB992;
   margin-bottom: 10px;
   padding: 20px;
   color:#DEB992;
-  width: 60%;
   font-weight: bold;
 }
 
@@ -319,4 +317,73 @@ outline: 1px solid slategrey;
   height: 100px;
   width: 300px;
   margin: 20px 0 20px 0
+}
+
+.login-form{
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  row-gap: 30px;
+  justify-content: center;
+  justify-items: end;
+  align-items: center;
+  color:#DEB992;
+  font-weight: bold;
+}
+
+.login-title, .register-title {
+  color:#1BA098;
+  font-size: 4ch;
+  font-weight: bold;
+  margin: 10px 0 30px 0;
+}
+
+.register-link {
+  text-decoration: none;
+  color:#DEB992;
+  font-weight: bold;
+}
+
+.register-form {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  row-gap: 30px;
+  justify-content: center;
+  justify-items: end;
+  align-items: center;
+  color:#DEB992;
+  font-weight: bold;
+}
+
+.register-link:hover {
+  text-decoration: none;
+  color:orangered;
+  font-weight: bold;
+}
+
+.register-button {
+  margin-top: 10px;
+  background-color: #1BA098;
+  color:#DEB992;
+  font-weight: bold;
+  margin-right: 75px;
+}
+
+.register-button:hover {
+  background-color: orangered;
+  color:#DEB992;
+  font-weight: bold;
+}
+
+.login-button {
+  margin-top: 10px;
+  background-color: #1BA098;
+  color:#DEB992;
+  font-weight: bold;
+  margin-right: 75px;
+}
+
+.login-button:hover {
+  background-color: orangered;
+  color:#DEB992;
+  font-weight: bold;
 }

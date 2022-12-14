@@ -11,7 +11,7 @@ let defaultProps = {
       lat: parseInt(lat),
       lng: parseInt(-long)
     },
-    zoom:12
+    zoom:9
   }
 
   return (

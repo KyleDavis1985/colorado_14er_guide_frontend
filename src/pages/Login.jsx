@@ -26,6 +26,7 @@ return(
   <div className="login">
     <div className="login-title">Login</div>
       <form className="login-form" onSubmit={handleSubmit}>
+        <div>
         <label htmlFor='email'>Email: </label>
           <input
             onChange={handleChange}
@@ -34,7 +35,8 @@ return(
             placeholder="example@example.com"
             value={formValues.email}
             required/>
-            <br></br><br></br>
+        </div>
+        <div>
         <label htmlFor='password'>Password: </label>
           <input
             onChange={handleChange}
@@ -43,12 +45,14 @@ return(
             placeholder='Your Password'
             value={formValues.password}
             required/>
-            <br></br><br></br>
+        </div>
+        <div className='login-button-wrapper'>
         <button className="login-button" disabled={!formValues.email || !formValues.password}>Log In</button>
+        </div>
       </form>
         <div>
           <h4>Not a member?</h4>
-            <Link to="/Register">Register</Link>
+            <Link to="/Register" className='register-link'>Register</Link>
         </div>
   </div>
     )

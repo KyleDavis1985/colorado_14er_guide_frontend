@@ -43,6 +43,7 @@ const Register = () => {
         <div className="register">
             <div className="register-title">Register</div>
             <form className="register-form" onSubmit={handleSubmit}>
+                <div>
                 <label> Name: </label>
                 <input
                     onChange={handleChange}
@@ -51,7 +52,8 @@ const Register = () => {
                     placeholder="First Name"
                     value={formValues.firstName}
                     required/>
-                <br></br><br></br>
+                </div>
+                <div>
                 <label> Email Address: </label>
                 <input
                     onChange={handleChange}
@@ -60,7 +62,8 @@ const Register = () => {
                     placeholder="example@example.com"
                     value={formValues.email}
                     required/>
-                <br></br><br></br>
+                </div>
+                <div>
                 <label> Password: </label>
                 <input
                     onChange={handleChange}
@@ -69,7 +72,8 @@ const Register = () => {
                     placeholder='Your Password'
                     value={formValues.password}
                     required/>
-                <br></br><br></br>
+                </div>
+                <div>
                 <label> Verify Password: </label>
                 <input
                     onChange={handleChange}
@@ -78,8 +82,10 @@ const Register = () => {
                     placeholder='Your Password'
                     value={formValues.verifyPassword}
                     required/>
-                <br></br><br></br>
+                </div>
+                <div className='register-button-wrapper'>
                 <button className="register-button" disabled={(!formValues.email || !formValues.password || !formValues.name) && (formValues.password === formValues.verifyPassword)}>Create Account</button>
+                </div>
             </form>
         </div>
     )
