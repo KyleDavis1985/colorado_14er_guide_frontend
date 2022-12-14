@@ -291,7 +291,22 @@ outline: 1px solid slategrey;
 }
 
 .trip-title {
-  color: #DEB992;
+  color:#1BA098;
   font-size: 4ch;
 }
 
+.edit-post-title {
+  font-size: 3ch;
+  border-top: 2px solid #DEB992;
+  margin-bottom: 10px;
+  padding: 20px;
+  color:#DEB992;
+  width: 60%;
+  font-weight: bold;
+}
+
+.editText {
+  height: 100px;
+  width: 300px;
+  margin: 20px 0 20px 0
+}

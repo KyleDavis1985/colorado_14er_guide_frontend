@@ -26,7 +26,7 @@ let newDate = date.toLocaleDateString('en-US')
 <div className='entireTrWrapper'>
   <div className='trWidthWrapper'>
     <div>
-      <h5 className='trTime'>{newTime} {newDate}</h5>
+      <h5 className='trTime'>Posted On: {newDate} at {newTime}</h5>
     </div>
     <div className='trTitleWrapper'>
       <h3 className='trTitle'>{props.title}</h3>
