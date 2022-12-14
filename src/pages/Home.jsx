@@ -9,6 +9,7 @@ const Home = (props) => {
       </div>
       <div><h3>to</h3></div>
       <h1 className='homeTitle'>53 PEAKS</h1>
+      <h3>A website dedicated to Colorado's 14 thousand foot mountains</h3>
     </div>
   ):
   (

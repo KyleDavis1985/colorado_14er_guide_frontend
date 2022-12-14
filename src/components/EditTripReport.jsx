@@ -1,5 +1,5 @@
 import axios from "axios"
-import { useState, useEffect } from "react"
+import { useState } from "react"
 
 const EditTripReport = (props) => {
     const [newPost, setNewPost] = useState({ title: '', body: '', image: '' })
@@ -50,21 +50,6 @@ const EditTripReport = (props) => {
         setNewPost({ title: '', body: '', image: '' })
     }
 
-//    return (
-//     <div className="edit-post"> 
-//         <div className="edit-post-title">Edit Post</div>
-//             <form className='edit-post-form' onSubmit={handleSubmit}>
-//                 <label>Mountain: </label>
-//                 <input  type='text' placeholder={props.title} value={newPost.title} onChange={handleChange} name = {'title'}/>
-//                 <br/><br/>
-//                 <label>Body: </label>
-//                 <input  type='text' placeholder={props.body} value={newPost.body} onChange={handleChange} name={'body'}/>
-//                 <br/><br/>
-//                 <button className='edit-post-button'>Confirm Changes</button>
-//             </form>
-//     </div>
-// )
-
 return (
     <div className="create-post">
         <div className="postTitleWrapper">
@@ -76,7 +61,9 @@ return (
             <br></br>
             <textarea className="editText" placeholder={props.body} value={newPost.body} onChange={handleChange} name={'body'}></textarea>
             <br></br>
+            <div className="edit-post-button-wrapper">
             <button className='edit-post-button'>Confirm Changes</button>
+            </div>
         </form>
     </div>
 )

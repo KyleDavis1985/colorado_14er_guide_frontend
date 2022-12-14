@@ -19,7 +19,7 @@ const TripReports = (props) => {
       setTripReport(response.data)
     }
     tripReportCall()
-  }, [])
+  },)
   
   return props.user && props.authenticated ?(
     <div className='trWrapper'>

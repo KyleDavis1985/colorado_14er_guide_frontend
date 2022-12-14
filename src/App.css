@@ -44,7 +44,7 @@ outline: 1px solid slategrey;
   justify-content: center;
   align-items: center;
   background-color: #051622;
-  height: fill;
+  height: stretch;
 }
 
 .mountain-div{
@@ -197,14 +197,15 @@ outline: 1px solid slategrey;
   height: 100vh;
   background-repeat: no-repeat;
   background-size: contain;
-  background-color:#051622
+  background-color:#051622;
+  color:#01080d
 }
 
 .homeInfoWrapper{
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 200px;
+  padding-top: 100px;
 }
 
 .homeTitle {
