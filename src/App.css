@@ -416,3 +416,19 @@ outline: 1px solid slategrey;
 .left-header{
   display: flex;
 }
+
+.map-display-button{
+  background-color: red;
+  color: #DEB992;
+  font-weight: bold;
+  height: 30px;
+  width: 70px
+}
+
+.map-display-button:hover{
+  background-color: orangered;
+  color: #DEB992;
+  font-weight: bold;
+  height: 30px;
+  width: 70px
+}

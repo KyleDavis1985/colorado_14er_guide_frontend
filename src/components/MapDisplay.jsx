@@ -11,18 +11,18 @@ let defaultProps = {
       lat: parseInt(lat),
       lng: parseInt(-long)
     },
-    zoom:9
+    zoom:10
   }
 
   return (
-    <div style={{ height: '70vh', width: '100%' }}>
+    <div style={{ height: '30vh', width: '100%' }}>
       <GoogleMapReact
         bootstrapURLKeys={{ key: process.env.REACT_APP_API_KEY}}
         defaultCenter={defaultProps.center}
         defaultZoom={defaultProps.zoom}
       > 
       </GoogleMapReact>
-      <button className="edit-button" onClick={props.handleClick}>Close</button>
+      <button className="map-display-button" onClick={props.handleClick}>Close</button>
     </div>
   )
 }
