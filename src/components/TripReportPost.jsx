@@ -39,13 +39,10 @@ const CreatePost = (props) => {
                 <div className="create-post-title">Create Trip Report</div>
             </div>
             <form className='create-post-form' onSubmit={handleSubmit}>
-                <label>Mountain: </label>
+                <label>Mountain Name: </label>
                 <input required type='text' value={newPost.title} onChange={handleChange} name={'title'}></input>
                 <br></br>
                 <textarea className="postText" required type='text' value={newPost.body} onChange={handleChange} name={'body'} placeholder={'Add trip report here'}></textarea>
-                <br></br>
-                <label>Image Link: </label>
-                <input type='text' value={newPost.image} onChange={handleChange} name={'image'} placeholder={'Optional'}></input>
                 <br></br>
                 <button className='create-post-button'>Create Trip Report</button>
             </form>

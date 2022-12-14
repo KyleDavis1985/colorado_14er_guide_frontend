@@ -239,3 +239,59 @@ outline: 1px solid slategrey;
   align-items: center;
 }
 
+.trContentWrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-items: center;
+  background-color: #01080d;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 100px;
+}
+
+.trWidthWrapper {
+  display: grid;
+  grid-template-rows: 1fr 1fr 3fr 1fr;
+  margin: 10px 0 10px 0;
+  color:#DEB992;
+  width: 60%;
+  border-top: 2px solid #DEB992;
+  padding-top: 10px;
+}
+
+.entireTrWrapper{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.trTime, .trTitle{
+  margin:2px;
+  padding:2px;
+}
+
+.trButtonWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+}
+
+.edit-button {
+  background-color: #1BA098;
+  color: #DEB992;
+  font-weight: bold;
+}
+
+.delete-button { 
+  background-color: red;
+  color: #DEB992;
+  font-weight: bold;
+}
+
+.trip-title {
+  color: #DEB992;
+  font-size: 4ch;
+}
+

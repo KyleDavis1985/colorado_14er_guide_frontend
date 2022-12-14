@@ -23,24 +23,34 @@ let newDate = date.toLocaleDateString('en-US')
 
   if (clicked === false && props.userAuth && props.auth) {
     return (
+<div className='entireTrWrapper'>
+  <div className='trWidthWrapper'>
     <div>
-      <div>
-        <div>
-          <h5>{newTime} {newDate}</h5>
-        </div>
-        <div>
-          <h3>{props.title}</h3>
-        </div>
-        <div>
-          <h5>{props.body}</h5>
+      <h5 className='trTime'>{newTime} {newDate}</h5>
+    </div>
+    <div className='trTitleWrapper'>
+      <h3 className='trTitle'>{props.title}</h3>
+    </div>
+    <div className='trContentWrapper'>
+      <div className='trBodyWrapper'>
+        <div className='trBodyOneWrapper'>
+          <p className='trBody'>{props.body}</p>
         </div>
         <div>
           <h1>{props.image}</h1>
         </div>
       </div>
-      <div><button className="delete-button" onClick={handleDelete}>Delete Trip Report</button></div>
-      <div><button className="edit-button" onClick={handleClick}>Edit Trip Report</button></div>
-    </div>
+      </div>
+      <div className='trButtonWrapper'>
+        <div>
+          <button className="delete-button" onClick={handleDelete}>Delete Trip Report</button>
+        </div>
+        <div>
+          <button className="edit-button" onClick={handleClick}>Edit Trip Report</button>
+        </div>
+      </div>
+  </div>
+</div>
     )
   } else if (clicked === true && props.userAuth && props.auth){
     return (
