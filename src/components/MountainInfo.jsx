@@ -16,7 +16,7 @@ const MountainInfo = (props) => {
       <h5>{props.rank}</h5>
       <h5>{props.elevation}</h5>
       <h5>{props.range}</h5>
-      <div>
+      <div className='link-wrapper'>
       <a href={`https://forecast.weather.gov/MapClick.php?lat=${props.lat}&lon=-${props.long}`} className='additional-info-wrapper'> Weather </a>
       <button className="edit-button" onClick={handleClick}>Map</button>
       </div>

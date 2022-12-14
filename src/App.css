@@ -300,6 +300,18 @@ outline: 1px solid slategrey;
   font-weight: bold;
 }
 
+.edit-button:hover {
+  background-color:orangered;
+  color: #DEB992;
+  font-weight: bold;
+}
+
+.delete-button:hover { 
+  background-color: orangered;
+  color: #DEB992;
+  font-weight: bold;
+}
+
 .trip-title {
   color:#1BA098;
   font-size: 4ch;
@@ -386,4 +398,12 @@ outline: 1px solid slategrey;
   background-color: orangered;
   color:#DEB992;
   font-weight: bold;
+}
+
+.link-wrapper{
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  row-gap: 4px;
 }
