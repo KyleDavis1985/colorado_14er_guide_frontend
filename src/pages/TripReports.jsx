@@ -31,7 +31,7 @@ const TripReports = (props) => {
       </div>
       <div className='trBodyWrapper'>
       {handleSort.map((post) => (
-        <TripReportInfo key={post.id} body={post.body} title={post.title} image={post.image} BASE_URL={BASE_URL} id={post.id} user={user} userAuth={props.user} auth={props.authenticated} created={post.createdAt}/>
+        <TripReportInfo key={post.id} body={post.body} title={post.title} image={post.image} BASE_URL={BASE_URL} id={post.id} userId={post.userId} user={user} userAuth={props.user} auth={props.authenticated} created={post.createdAt}/>
       ))}
       </div>
     </div>

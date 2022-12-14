@@ -4,12 +4,16 @@ import { Link } from 'react-router-dom'
 const UnauthorizedHeader = () => {
   return (
     <header>
-      <nav>
-        <Link to ="/">Home</Link>
-        <Link to ="/mountains">14ers</Link>
-        <Link to ="/tr">Trip Reports</Link>
-        <Link to="/login">Login</Link>
-      </nav>
+      <div className='header-container'>
+        <nav>
+          <div className='left-header'>
+            <Link to ="/" className='header-home'>Home</Link>
+            <Link to ="/mountains" className='header-mountain'>14ers</Link>
+            <Link to ="/tr" className='header-tripReport'>Trip Reports</Link>
+            <Link to ="/login" className='right-align'>Login</Link>
+          </div>
+        </nav>
+      </div>
     </header>
   )
 }

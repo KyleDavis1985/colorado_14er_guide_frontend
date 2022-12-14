@@ -21,7 +21,7 @@ let newTime = date.toLocaleTimeString('en-US')
 let newDate = date.toLocaleDateString('en-US')
 
 
-  if (clicked === false && props.userAuth && props.auth) {
+  if (clicked === false && props.userId === props.user.id && props.userAuth && props.auth) {
     return (
 <div className='entireTrWrapper'>
   <div className='trWidthWrapper'>
@@ -52,7 +52,7 @@ let newDate = date.toLocaleDateString('en-US')
   </div>
 </div>
     )
-  } else if (clicked === true && props.userAuth && props.auth){
+  } else if (clicked === true){
     return (
       <div>
         <EditTripReport title={props.title} body={props.body} image={props.image} id={props.id} BASE_URL={props.BASE_URL} setClicked={setClicked}/>
@@ -60,19 +60,26 @@ let newDate = date.toLocaleDateString('en-US')
     )
   } else if (clicked === false){
     return (
-      <div>
-      <div>
-        <div>
-          <h1>{props.title}</h1>
-        </div>
-        <div>
-          <h4>{props.body}</h4>
+<div className='entireTrWrapper'>
+  <div className='trWidthWrapper'>
+    <div>
+      <h5 className='trTime'>Posted On: {newDate} at {newTime}</h5>
+    </div>
+    <div className='trTitleWrapper'>
+      <h3 className='trTitle'>{props.title}</h3>
+    </div>
+    <div className='trContentWrapper'>
+      <div className='trBodyWrapper'>
+        <div className='trBodyOneWrapper'>
+          <p className='trBody'>{props.body}</p>
         </div>
         <div>
           <h1>{props.image}</h1>
         </div>
       </div>
-    </div>
+      </div>
+  </div>
+</div>
     )
   }
 } 

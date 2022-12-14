@@ -47,7 +47,7 @@ return(
         <button className="login-button" disabled={!formValues.email || !formValues.password}>Log In</button>
       </form>
         <div>
-          <h4>Still Need to Register?</h4>
+          <h4>Not a member?</h4>
             <Link to="/Register">Register</Link>
         </div>
   </div>
