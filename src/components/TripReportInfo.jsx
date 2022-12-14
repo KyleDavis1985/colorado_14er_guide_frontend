@@ -1,6 +1,6 @@
 import React from 'react'
 import axios from 'axios'
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import EditTripReport from './EditTripReport';
 
 const TripReportInfo = (props) => {
@@ -20,9 +20,9 @@ const date = new Date(props.created)
 let newTime = date.toLocaleTimeString('en-US')
 let newDate = date.toLocaleDateString('en-US')
 
-
-  if (clicked === false && props.userId === props.user.id && props.userAuth && props.auth) {
-    return (
+let tripReport
+  if (clicked === false && props.user && props.auth) {
+    tripReport = (
 <div className='entireTrWrapper'>
   <div className='trWidthWrapper'>
     <div>
@@ -53,13 +53,14 @@ let newDate = date.toLocaleDateString('en-US')
 </div>
     )
   } else if (clicked === true){
-    return (
+    tripReport = (
       <div>
         <EditTripReport title={props.title} body={props.body} image={props.image} id={props.id} BASE_URL={props.BASE_URL} setClicked={setClicked}/>
       </div>
     )
-  } else if (clicked === false){
-    return (
+  } 
+
+  let publicTripReport = (
 <div className='entireTrWrapper'>
   <div className='trWidthWrapper'>
     <div>
@@ -80,8 +81,25 @@ let newDate = date.toLocaleDateString('en-US')
       </div>
   </div>
 </div>
+  )
+
+if (props.auth) {
+  if (props.userId === props.user.id) {
+    return (
+      tripReport
+    )
+  } else {
+    return (
+      publicTripReport
     )
   }
-} 
+} else {
+  return (
+    publicTripReport
+  )
+}
+}
+
+
 
 export default TripReportInfo

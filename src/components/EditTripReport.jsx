@@ -1,5 +1,5 @@
 import axios from "axios"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 const EditTripReport = (props) => {
     const [newPost, setNewPost] = useState({ title: '', body: '', image: '' })

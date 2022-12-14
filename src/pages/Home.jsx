@@ -1,6 +1,7 @@
 import React from 'react'
 
 const Home = (props) => {
+
   return props.user && props.authenticated ? (
     <div className='homeWrapper'>
       <div className='homeInfoWrapper'>
