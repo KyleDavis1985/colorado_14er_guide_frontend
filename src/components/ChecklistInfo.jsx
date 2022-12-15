@@ -35,6 +35,7 @@ const ChecklistInfo = (props) => {
     }
   }
 
+
 return (
   <div className='checklist-info-wrapper'>
       <div key={props.id}>

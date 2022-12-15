@@ -103,7 +103,7 @@ outline: 1px solid slategrey;
 
 .scroll{
   overflow-y: scroll;
-  height: 100vh;
+  height: 95vh;
 }
 
 .additional-info-wrapper {
@@ -126,7 +126,7 @@ outline: 1px solid slategrey;
 
 .checklist-container-div{
   overflow-y: scroll;
-  height: 100vh;
+  height: 95vh;
   padding-right: 10px;
 }
 
@@ -177,9 +177,8 @@ outline: 1px solid slategrey;
 }
 
 .trWrapper{
-  height: 100%;
   background-color: #051622;
-  height: 100vh;
+  height: 95vh;
   overflow-y: scroll;
 }
 
@@ -194,9 +193,9 @@ outline: 1px solid slategrey;
 
 .homeWrapper{
   background-image: url("https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/maroon-bells-sunset-luis-a-ramirez.jpg");
-  height: 100vh;
+  height: 95vh;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-color:#051622;
   color:#01080d
 }
