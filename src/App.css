@@ -103,7 +103,7 @@ outline: 1px solid slategrey;
 
 .scroll{
   overflow-y: scroll;
-  height: 95vh;
+  height: 90vh;
 }
 
 .additional-info-wrapper {
@@ -126,7 +126,7 @@ outline: 1px solid slategrey;
 
 .checklist-container-div{
   overflow-y: scroll;
-  height: 95vh;
+  height: 82.5vh;
   padding-right: 10px;
 }
 
